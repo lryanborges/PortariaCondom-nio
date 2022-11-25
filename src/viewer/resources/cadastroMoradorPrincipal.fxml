@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="600.0" style="-fx-background-color: #1F231F;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.api.TelaCadastroController">
+   <children>
+      <Pane layoutX="41.0" layoutY="64.0" prefHeight="337.0" prefWidth="518.0" style="-fx-background-color: #3F543D; -fx-border-radius: 2; -fx-border-width: 2; -fx-border-color: #3F543D;">
+         <children>
+            <TextField fx:id="nome" layoutX="219.0" layoutY="55.0" prefHeight="25.0" prefWidth="279.0" style="-fx-background-color: #F3F3C4;" />
+            <TextField fx:id="rg" layoutX="219.0" layoutY="93.0" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="173.0" layoutY="59.0" text="Nome:" textFill="WHITE" />
+            <Pane layoutX="39.0" layoutY="45.0" prefHeight="120.0" prefWidth="100.0" style="-fx-background-color: #F3F3C4;" styleClass="button-hand">
+               <children>
+                  <Label layoutX="10.0" layoutY="52.0" text="Insira foto aqui" textFill="#60603c" />
+               </children>
+            </Pane>
+            <Label layoutX="191.0" layoutY="97.0" text="RG:" textFill="WHITE" />
+            <Label layoutX="347.0" layoutY="97.0" text="CPF:" textFill="WHITE" />
+            <TextField fx:id="cpf" layoutX="373.0" layoutY="93.0" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="152.0" layoutY="135.0" text="Data nasc.:" textFill="WHITE" />
+            <TextField fx:id="nasc" layoutX="219.0" layoutY="131.0" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #F3F3C4;" />
+            <TextField fx:id="bloco" layoutX="328.0" layoutY="131.0" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="290.0" layoutY="135.0" text="Bloco:" textFill="WHITE" />
+            <Label layoutX="370.0" layoutY="135.0" text="Apartamento:" textFill="WHITE" />
+            <TextField fx:id="apartamento" layoutX="449.0" layoutY="131.0" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="75.0" layoutY="193.0" text="E-mail:" textFill="WHITE" />
+            <TextField fx:id="email" layoutX="118.0" layoutY="189.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #F3F3C4;" />
+            <ChoiceBox fx:id="categoria" layoutX="371.0" layoutY="189.0" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="28.0" layoutY="233.0" text="Tel. Residencial:" textFill="WHITE" />
+            <TextField fx:id="telResidencial" layoutX="118.0" layoutY="229.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: #F3F3C4;" />
+            <TextField fx:id="telComercial" layoutX="364.0" layoutY="229.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="274.0" layoutY="233.0" text="Tel. Comercial:" textFill="WHITE" />
+            <TextField fx:id="telCelular" layoutX="118.0" layoutY="266.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="50.0" layoutY="270.0" text="Tel. Celular:" textFill="WHITE" />
+            <CheckBox fx:id="zap" layoutX="276.0" layoutY="270.0" mnemonicParsing="false" text="Permite sua adição no grupo do zap?" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="181.0" layoutY="37.0" text="Cadastrar Morador Principal" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="334.0" layoutY="412.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Cadastrar" textFill="#252d24">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="162.0" layoutY="412.0" mnemonicParsing="false" onAction="#telaRegistros" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Voltar" textFill="#252d24">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
