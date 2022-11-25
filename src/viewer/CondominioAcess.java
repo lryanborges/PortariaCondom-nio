@@ -108,5 +108,44 @@ private static Stage stage;
 	public static void setStage(Stage stage) {
 		CondominioAcess.stage = stage;
 	}
+
+	public static void telaCadastroAnimal() {
+		try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/cadastroAnimal.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Animais");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+	}
+
+	public static void telaRegistroAnimal() {
+		try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/registroAnimal.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Registro de Animais");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+	}
+
+	public static void telaEdicaoAnimal() {
+		 try {
+	            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/edicaoAnimal.fxml"));
+	            Scene scene = new Scene (root);
+	            stage.setScene(scene);
+	            stage.setTitle("Tela de Edição de Animais");
+	            stage.show();
+	        }
+	        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+	            e.printStackTrace();
+	        }
+	}
 	
 }

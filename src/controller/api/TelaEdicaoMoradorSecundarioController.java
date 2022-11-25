@@ -1,6 +1,5 @@
 package controller.api;
 
-import controller.dto.MoradorPrincipalDTO;
 import controller.dto.MoradorSecundarioDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

@@ -9,16 +9,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="733.0" style="-fx-background-color: #1F231F;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.api.RegistroMoradorSecundarioController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="733.0" style="-fx-background-color: #1F231F;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.api.RegistroAnimalController">
    <children>
       <Pane layoutX="23.0" layoutY="64.0" prefHeight="445.0" prefWidth="686.0" style="-fx-background-color: #3F543D; -fx-border-radius: 2; -fx-border-width: 2; -fx-border-color: #3F543D;">
          <children>
             <Button layoutX="434.0" layoutY="393.0" mnemonicParsing="false" onAction="#telaCadastrar" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Adicionar" textFill="#252d24">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Button>
-            <Button layoutX="289.0" layoutY="393.0" mnemonicParsing="false" onAction="#telaEditar" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Editar" textFill="#252d24">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -28,14 +23,20 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <TableView fx:id="tabelaMoradorSecundario" layoutX="81.0" layoutY="62.0" prefHeight="269.0" prefWidth="525.0">
+            <Button layoutX="289.0" layoutY="393.0" mnemonicParsing="false" onAction="#telaEditar" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Editar" textFill="#252d24">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tabelaAnimal" layoutX="81.0" layoutY="62.0" prefHeight="269.0" prefWidth="525.0">
               <columns>
-                <TableColumn fx:id="columnId" prefWidth="31.0" text="Id" />
-                <TableColumn fx:id="columnNome" prefWidth="172.0" text="Nome" />
-                  <TableColumn fx:id="columnParentesco" prefWidth="76.0" text="Parentesco" />
-                  <TableColumn fx:id="columnNascimento" prefWidth="67.0" text="Data Nasc." />
-                  <TableColumn fx:id="columnApartamento" prefWidth="83.0" text="Apartamento" />
-                  <TableColumn fx:id="columnIdMoradorP" prefWidth="95.0" text="Id Morador Principal" />
+                <TableColumn fx:id="columnId" prefWidth="52.000022888183594" text="Id" />
+                <TableColumn fx:id="columnNome" prefWidth="175.199951171875" text="Nome" />
+                  <TableColumn fx:id="columnCor" prefWidth="76.0" text="Cor" />
+                  <TableColumn fx:id="columnEspecie" prefWidth="68.79998779296875" text="Especie" />
+                  <TableColumn fx:id="columnRaca" prefWidth="53.600006103515625" text="Raca" />
+                  <TableColumn fx:id="columnIdMoradorP" prefWidth="51.2000732421875" text="Id Mp" />
+                  <TableColumn fx:id="columnAp" prefWidth="46.4000244140625" text="Ap" />
               </columns>
             </TableView>
             <Pane fx:id="confirmarExclusao" layoutX="177.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="335.0" style="-fx-background-color: B9B9B9; -fx-border-style: solid; -fx-border-width: 2px; -fx-border-radius: 2px;" visible="false">
@@ -56,7 +57,7 @@
             </Pane>
          </children>
       </Pane>
-      <Label layoutX="66.0" layoutY="14.0" text="Registro de Moradores Secundarios" textFill="WHITE">
+      <Label layoutX="197.0" layoutY="14.0" text="Registro de Animais" textFill="WHITE">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>

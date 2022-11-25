@@ -1,9 +1,6 @@
-package model.entity;
+package controller.dto;
 
-import controller.dto.AnimalDTO;
-
-public class Animal {
-	
+public class AnimalDTO {
 	private int id;
 	private String especie;
 	private String nome;
@@ -12,38 +9,7 @@ public class Animal {
 	private int idMorador;
 	private int apartamento;
 	
-	public Animal() {}
-	
-	public Animal(int id, String especie, String nome, String raca, String cor) {
-		setId(id);
-		setEspecie(especie);
-		setNome(nome);
-		setRaca(raca);
-		setCor(cor);
-	}
-	
-	public Animal(String especie, String nome, String raca, String cor) {
-		setEspecie(especie);
-		setNome(nome);
-		setRaca(raca);
-		setCor(cor);
-	}
-	
-	public Animal(int id, String especie, String nome, String cor) {
-		setId(id);
-		setEspecie(especie);
-		setNome(nome);
-		setRaca("Não especificado");
-		setCor(cor);
-	}
-	
-	public Animal(String especie, String nome, String cor) {
-		setEspecie(especie);
-		setNome(nome);
-		setRaca("Não especificado");
-		setCor(cor);
-	}
-	
+	public AnimalDTO() {}
 	// Getters e Setters
 
 	public int getId() {
@@ -108,18 +74,4 @@ public class Animal {
 	public void setApartamento(int apartamento) {
 		this.apartamento = apartamento;
 	}
-	
-	
-	public static Animal converter(AnimalDTO dto) {
-		Animal a = new Animal();
-		a.setApartamento(dto.getApartamento());
-		a.setCor(dto.getCor());
-		a.setEspecie(dto.getEspecie());
-		a.setId(dto.getId());
-		a.setIdMorador(dto.getIdMorador());
-		a.setNome(dto.getNome());
-		a.setRaca(dto.getRaca());
-		return a;
-	}
-	
 }
