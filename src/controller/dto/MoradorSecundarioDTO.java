@@ -1,9 +1,7 @@
-package model.entity;
+package controller.dto;
 
-import controller.dto.MoradorSecundarioDTO;
+public class MoradorSecundarioDTO {
 
-public class MoradorSecundario {
-	
 	private int id;
 	private String nome;
 	private String parentesco;
@@ -11,22 +9,22 @@ public class MoradorSecundario {
 	private int idMoradorP;
 	private int apartamento;
 	
-	public MoradorSecundario() {}
+	public MoradorSecundarioDTO() {}
 	
-	public MoradorSecundario(int id, String nome, String parentesco, String dataNasc) {
+	public MoradorSecundarioDTO(int id, String nome, String parentesco, String dataNasc) {
 		setId(id);
 		setNome(nome);
 		setParentesco(parentesco);
 		setDataNasc(dataNasc);
 	}
 	
-	public MoradorSecundario(String nome, String parentesco, String dataNasc) {
+	public MoradorSecundarioDTO(String nome, String parentesco, String dataNasc) {
 		setNome(nome);
 		setParentesco(parentesco);
 		setDataNasc(dataNasc);
 	}
 	
-	public MoradorSecundario(int id, String parentesco, String dataNasc) {
+	public MoradorSecundarioDTO(int id, String parentesco, String dataNasc) {
 		setId(id);
 		setNome(parentesco+" de Fulano");
 		setParentesco(parentesco);
@@ -71,14 +69,6 @@ public class MoradorSecundario {
 		} else this.dataNasc = dataNasc;
 	}
 
-	public int getApartamento() {
-		return apartamento;
-	}
-
-	public void setApartamento(int apartamento) {
-		this.apartamento = apartamento;
-	}
-
 	public int getIdMoradorP() {
 		return idMoradorP;
 	}
@@ -86,21 +76,13 @@ public class MoradorSecundario {
 	public void setIdMoradorP(int idMoradorP) {
 		this.idMoradorP = idMoradorP;
 	}
-	
-	public static MoradorSecundario converter(MoradorSecundarioDTO msDTO) {
-		
-		MoradorSecundario ms = new MoradorSecundario();
-		
-		ms.setId(msDTO.getId());
-		ms.setNome(msDTO.getNome());
-		ms.setApartamento(msDTO.getApartamento());
-		ms.setDataNasc(msDTO.getDataNasc());
-		ms.setParentesco(msDTO.getParentesco());
-		ms.setIdMoradorP(msDTO.getIdMoradorP());
-		
-		return ms;
-		
+
+	public int getApartamento() {
+		return apartamento;
 	}
-	
+
+	public void setApartamento(int apartamento) {
+		this.apartamento = apartamento;
+	}
 	
 }

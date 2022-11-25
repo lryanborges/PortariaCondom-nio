@@ -19,7 +19,7 @@ private static Stage stage;
 	public void start(Stage stg) throws Exception {
         setStage(stg);
         stg.setTitle("Cadastro");
-        telaRegistroMoradorPrincipal();
+        telaRegistroMoradorSecundario();
     }
     
     public static void telaCadastroMoradorPrincipal() {
@@ -60,6 +60,46 @@ private static Stage stage;
             e.printStackTrace();
         }
     }
+    
+    public static void telaCadastroMoradorSecundario() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/cadastroMoradorSecundario.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Moradores Secundários");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
+    
+    public static void telaEdicaoMoradorSecundario() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/edicaoMoradorSecundario.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Edição de Moradores Secundarios");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
+    
+    public static void telaRegistroMoradorSecundario() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/registroMoradorSecundario.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Moradores Secundários");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
+
 
 	public static Stage getStage() {
 		return stage;

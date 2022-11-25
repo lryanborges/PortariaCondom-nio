@@ -9,27 +9,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="733.0" style="-fx-background-color: #1F231F;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.api.RegistroMoradorPrincipalController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="733.0" style="-fx-background-color: #1F231F;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.api.RegistroMoradorSecundarioController">
    <children>
       <Pane layoutX="23.0" layoutY="64.0" prefHeight="445.0" prefWidth="686.0" style="-fx-background-color: #3F543D; -fx-border-radius: 2; -fx-border-width: 2; -fx-border-color: #3F543D;">
          <children>
-            <TableView fx:id="tabelaMoradorPrincipal" layoutX="8.0" layoutY="38.0" prefHeight="349.0" prefWidth="671.0">
-              <columns>
-                <TableColumn fx:id="columnId" prefWidth="23.0" text="ID" />
-                <TableColumn fx:id="columnNome" prefWidth="102.0" text="Nome" />
-                  <TableColumn fx:id="columnCpf" prefWidth="56.0" text="CPF" />
-                  <TableColumn fx:id="columnBloco" prefWidth="37.0" text="Bloco" />
-                  <TableColumn fx:id="columnApartamento" prefWidth="45.0" text="Apartamento" />
-                  <TableColumn fx:id="columnRg" prefWidth="57.0" text="RG" />
-                  <TableColumn fx:id="columnNasc" prefWidth="46.0" text="Data Nasc." />
-                  <TableColumn fx:id="columnEmail" prefWidth="95.0" text="E-mail" />
-                  <TableColumn fx:id="columnCategoria" prefWidth="49.0" text="Categoria" />
-                  <TableColumn fx:id="columnTelResidencial" prefWidth="46.0" text="Tel. Residencial" />
-                  <TableColumn fx:id="columnTelComercial" prefWidth="44.0" text="Tel. Comercial" />
-                  <TableColumn fx:id="columnTelCelular" prefWidth="42.0" text="Tel. Celular" />
-                  <TableColumn fx:id="columnZap" prefWidth="28.0" text="Zap" />
-              </columns>
-            </TableView>
             <Button layoutX="434.0" layoutY="393.0" mnemonicParsing="false" onAction="#telaCadastrar" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Adicionar" textFill="#252d24">
                <font>
                   <Font name="System Bold" size="16.0" />
@@ -45,6 +28,16 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
+            <TableView fx:id="tabelaMoradorSecundario" layoutX="81.0" layoutY="62.0" prefHeight="269.0" prefWidth="525.0">
+              <columns>
+                <TableColumn fx:id="columnId" prefWidth="31.0" text="Id" />
+                <TableColumn fx:id="columnNome" prefWidth="172.0" text="Nome" />
+                  <TableColumn fx:id="columnParentesco" prefWidth="76.0" text="Parentesco" />
+                  <TableColumn fx:id="columnNascimento" prefWidth="67.0" text="Data Nasc." />
+                  <TableColumn fx:id="columnApartamento" prefWidth="83.0" text="Apartamento" />
+                  <TableColumn fx:id="columnIdMoradorP" prefWidth="95.0" text="Id Morador Principal" />
+              </columns>
+            </TableView>
             <Pane fx:id="confirmarExclusao" layoutX="177.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="335.0" style="-fx-background-color: B9B9B9; -fx-border-style: solid; -fx-border-width: 2px; -fx-border-radius: 2px;" visible="false">
                <children>
                   <Label layoutX="45.0" layoutY="15.0" prefHeight="37.0" prefWidth="216.0" text="Deseja mesmo excluir os dados?">
@@ -61,14 +54,9 @@
                   <Button layoutX="183.0" layoutY="51.0" mnemonicParsing="false" onAction="#excluir" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #CE5252;" styleClass="button-hand" text="Excluir" textFill="#fffbfb" />
                </children>
             </Pane>
-            <Button layoutX="23.0" layoutY="5.0" mnemonicParsing="false" onAction="#cadastroMoradorS" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Adicionar Morador" textFill="#252d24">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
          </children>
       </Pane>
-      <Label layoutX="98.0" layoutY="14.0" text="Registro de Moradores Principais" textFill="WHITE">
+      <Label layoutX="66.0" layoutY="14.0" text="Registro de Moradores Secundarios" textFill="WHITE">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
