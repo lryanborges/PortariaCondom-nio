@@ -140,5 +140,25 @@ public class RegistroMoradorPrincipalController implements Initializable{
     	CadastroMoradorSecundarioController.cadastroMoradorS(dto);
     	
     }
+    
+    public void cadastroEmpregado() {
+    	MoradorPrincipalDTO dto = new MoradorPrincipalDTO();
+    	
+    	dto.setId(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getId());
+    	dto.setNome(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getNome());
+    	dto.setCpf(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getCpf());
+    	dto.setRg(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getRg());
+    	dto.setApartamento(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getApartamento());
+    	dto.setBloco(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getBloco());
+    	dto.setCategoria(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getCategoria());
+    	dto.setEmail(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getEmail());
+    	dto.setDataNasc(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getDataNasc());
+    	dto.setTelCelular(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getTelCelular());
+    	dto.setTelResidencial(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getTelResidencial());
+    	dto.setTelComercial(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().getTelComercial());
+    	dto.setAutorizarZap(tabelaMoradorPrincipal.getSelectionModel().getSelectedItem().isAutorizarZap());
+    	
+    	TelaCadastroEmpregadoController.cadastroEmpregado(dto);
+    }
 
 }

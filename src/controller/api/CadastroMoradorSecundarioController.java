@@ -37,7 +37,7 @@ public class CadastroMoradorSecundarioController {
 
     @FXML
     public void telaRegistros() {
-		 CondominioAcess.telaRegistroMoradorSecundario();
+		 CondominioAcess.telaRegistroMoradorPrincipal();
 	}
 
 }

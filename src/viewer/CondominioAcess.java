@@ -19,7 +19,7 @@ private static Stage stage;
 	public void start(Stage stg) throws Exception {
         setStage(stg);
         stg.setTitle("Cadastro");
-        telaRegistroMoradorSecundario();
+        telaRegistroMoradorPrincipal();
     }
     
     public static void telaCadastroMoradorPrincipal() {
@@ -99,7 +99,45 @@ private static Stage stage;
             e.printStackTrace();
         }
     }
+    
+    public static void telaCadastroEmpregado() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/cadastroEmpregado.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Moradores Secundários");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
 
+    public static void telaRegistroEmpregado() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/registroEmpregado.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Moradores Secundários");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
+    
+    public static void telaEdicaoEmpregado() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/edicaoEmpregado.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Moradores Secundários");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
 
 	public static Stage getStage() {
 		return stage;

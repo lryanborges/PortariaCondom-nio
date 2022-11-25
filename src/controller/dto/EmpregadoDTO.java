@@ -1,9 +1,7 @@
-package model.entity;
+package controller.dto;
 
-import controller.dto.EmpregadoDTO;
+public class EmpregadoDTO {
 
-public class Empregados {
-	
 	private int id;
 	private String nome;
 	private String cargo;
@@ -12,23 +10,23 @@ public class Empregados {
 	private int idMoradorP;
 	private int apartamento;
 	
-	public Empregados() {}
+	public EmpregadoDTO() {}
 	
-	public Empregados(String nome, String cargo, String rg, String turno) {
+	public EmpregadoDTO(String nome, String cargo, String rg, String turno) {
 		setNome(nome);
 		setCargo(cargo);
 		setRg(rg);
 		setTurno(turno);
 	}
 	
-	public Empregados(String cargo, String rg, String turno) {
+	public EmpregadoDTO(String cargo, String rg, String turno) {
 		setNome("Porteiro");
 		setCargo(cargo);
 		setRg(rg);
 		setTurno(turno);
 	}
 	
-	public Empregados(String cargo, String turno) {
+	public EmpregadoDTO(String cargo, String turno) {
 		setNome("Porteiro substituto");
 		setCargo(cargo);
 		setRg("Não cadastrado");
@@ -95,19 +93,6 @@ public class Empregados {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public static Empregados converter(EmpregadoDTO mpDTO) {
-		Empregados emp = new Empregados();
-		emp.setId(mpDTO.getId());
-		emp.setNome(mpDTO.getNome());
-		emp.setRg(mpDTO.getRg());
-		emp.setTurno(mpDTO.getTurno());
-		emp.setCargo(mpDTO.getCargo());
-		emp.setApartamento(mpDTO.getApartamento());
-		emp.setIdMoradorP(mpDTO.getIdMoradorP());
-		
-		return emp;
 	}
 	
 }

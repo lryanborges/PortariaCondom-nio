@@ -66,6 +66,11 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
+            <Button layoutX="174.0" layoutY="5.0" mnemonicParsing="false" onAction="#cadastroEmpregado" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Adicionar Empregado" textFill="#252d24">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <Label layoutX="98.0" layoutY="14.0" text="Registro de Moradores Principais" textFill="WHITE">
