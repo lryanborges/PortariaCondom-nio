@@ -32,7 +32,7 @@ public class CadastroMoradorSecundarioController {
         dto.setIdMoradorP(idMoradorP);
         int id = bo.cadastrar(dto);
         dto.setId(id);
-        telaRegistros();
+        CondominioAcess.telaRegistroMoradorSecundario();
     }
 
     @FXML

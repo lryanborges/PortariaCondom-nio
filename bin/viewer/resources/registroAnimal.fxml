@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="733.0" style="-fx-background-color: #1F231F;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.api.RegistroAnimalController">
+   <children>
+      <Pane layoutX="23.0" layoutY="64.0" prefHeight="445.0" prefWidth="686.0" style="-fx-background-color: #3F543D; -fx-border-radius: 2; -fx-border-width: 2; -fx-border-color: #3F543D;">
+         <children>
+            <Button layoutX="434.0" layoutY="393.0" mnemonicParsing="false" onAction="#telaCadastrar" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Adicionar" textFill="#252d24">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="144.0" layoutY="393.0" mnemonicParsing="false" onAction="#confirmarExclusao" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Excluir" textFill="#252d24">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="289.0" layoutY="393.0" mnemonicParsing="false" onAction="#telaEditar" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Editar" textFill="#252d24">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tabelaAnimal" layoutX="81.0" layoutY="62.0" prefHeight="269.0" prefWidth="525.0">
+              <columns>
+                <TableColumn fx:id="columnId" prefWidth="52.000022888183594" text="Id" />
+                <TableColumn fx:id="columnNome" prefWidth="175.199951171875" text="Nome" />
+                  <TableColumn fx:id="columnCor" prefWidth="76.0" text="Cor" />
+                  <TableColumn fx:id="columnEspecie" prefWidth="68.79998779296875" text="Especie" />
+                  <TableColumn fx:id="columnRaca" prefWidth="53.600006103515625" text="Raca" />
+                  <TableColumn fx:id="columnIdMoradorP" prefWidth="51.2000732421875" text="Id Mp" />
+                  <TableColumn fx:id="columnAp" prefWidth="46.4000244140625" text="Ap" />
+              </columns>
+            </TableView>
+            <Pane fx:id="confirmarExclusao" layoutX="177.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="335.0" style="-fx-background-color: B9B9B9; -fx-border-style: solid; -fx-border-width: 2px; -fx-border-radius: 2px;" visible="false">
+               <children>
+                  <Label layoutX="45.0" layoutY="15.0" prefHeight="37.0" prefWidth="216.0" text="Deseja mesmo excluir os dados?">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="276.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Desktop/Trabalhos%20-%20UFERSA/3º%20semestre/P.O.O/Projeto%20POO/codigos/src/br/edu/ufersa/hospital/view/resources/Rectangle%2033.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="90.0" layoutY="51.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #FFFFFF;" styleClass="button-hand" text="Cancelar" />
+                  <Button layoutX="183.0" layoutY="51.0" mnemonicParsing="false" onAction="#excluir" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #CE5252;" styleClass="button-hand" text="Excluir" textFill="#fffbfb" />
+               </children>
+            </Pane>
+            <Button layoutX="6.0" layoutY="39.0" mnemonicParsing="false" onAction="#telaMain" style="-fx-background-color: none;" styleClass="button-hand">
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Desktop/Trabalhos%20-%20UFERSA/3º%20semestre/P.O.O/Projeto%20POO/codigos/src/br/edu/ufersa/hospital/view/resources/setavoltar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="197.0" layoutY="14.0" text="Registro de Animais" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

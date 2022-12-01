@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import model.entity.Empregados;
+import model.entity.MoradorPrincipal;
 
 public class EmpregadoDAO extends ConexaoDAO implements BaseInterfaceDAO<Empregados>{
 
@@ -118,5 +119,11 @@ public class EmpregadoDAO extends ConexaoDAO implements BaseInterfaceDAO<Emprega
 			
 		}
 	}
-	
+
+	@Override
+	public ResultSet listarDados(MoradorPrincipal mp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }		

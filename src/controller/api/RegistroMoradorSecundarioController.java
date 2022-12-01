@@ -108,5 +108,10 @@ public class RegistroMoradorSecundarioController implements Initializable {
     	
     	TelaEdicaoMoradorSecundarioController.telaEditar(dto);
     }
+    
+    @FXML
+    public void telaMain() {
+    	CondominioAcess.telaRegistroMoradorPrincipal();
+    }
 
 }

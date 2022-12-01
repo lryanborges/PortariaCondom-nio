@@ -6,14 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import controller.dto.EmpregadoDTO;
-import controller.dto.MoradorPrincipalDTO;
-import controller.dto.MoradorSecundarioDTO;
 import model.dao.BaseInterfaceDAO;
 import model.dao.EmpregadoDAO;
-import model.dao.MoradorSecundarioDAO;
 import model.entity.Empregados;
-import model.entity.MoradorPrincipal;
-import model.entity.MoradorSecundario;
+
 
 public class EmpregadoBO {
 
@@ -88,7 +84,7 @@ public class EmpregadoBO {
             	EmpregadoDTO mpDTO = new EmpregadoDTO();
                 mpDTO.setId(rs.getInt("id"));
                 mpDTO.setNome(rs.getString("nome"));
-                mpDTO.setApartamento(rs.getInt("cargo"));
+                mpDTO.setCargo(rs.getString("cargo"));
                 mpDTO.setTurno(rs.getString("turno"));
                 mpDTO.setRg(rs.getString("rg"));
                 mpDTO.setIdMoradorP(rs.getInt("id_MoradorP"));

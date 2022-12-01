@@ -11,5 +11,6 @@ public interface BaseInterfaceDAO<entity> {
 	public boolean excluir(entity e);
 	public ResultSet encontrar(entity e);
 	public ResultSet listar();
+	public ResultSet listarDados(MoradorPrincipal mp);
 	
 }

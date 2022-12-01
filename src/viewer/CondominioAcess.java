@@ -138,6 +138,85 @@ private static Stage stage;
             e.printStackTrace();
         }
     }
+    
+    public static void telaCadastroAnimal() {
+		try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/cadastroAnimal.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Animais");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+	}
+
+	public static void telaRegistroAnimal() {
+		try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/registroAnimal.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Registro de Animais");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+	}
+
+	public static void telaEdicaoAnimal() {
+		 try {
+	            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/edicaoAnimal.fxml"));
+	            Scene scene = new Scene (root);
+	            stage.setScene(scene);
+	            stage.setTitle("Tela de Edição de Animais");
+	            stage.show();
+	        }
+	        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+	            e.printStackTrace();
+	        }
+	}
+	
+	public static void telaCadastroVeiculo() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/cadastroVeiculo.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Veiculo");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
+    
+    public static void telaEdicaoVeiculo() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/edicaoVeiculo.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Edição de Veiculo");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
+    
+    public static void telaRegistroVeiculo() {
+        try {
+            Parent root = FXMLLoader.load(CondominioAcess.class.getResource("resources/registroVeiculo.fxml"));
+            Scene scene = new Scene (root);
+            stage.setScene(scene);
+            stage.setTitle("Tela de Cadastro de Veiculo");
+            stage.show();
+        }
+        catch(Exception e) {    // captura exception qnd qm chamar ele throws Excep.
+            e.printStackTrace();
+        }
+    }
+
 
 	public static Stage getStage() {
 		return stage;

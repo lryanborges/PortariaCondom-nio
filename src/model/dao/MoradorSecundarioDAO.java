@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import model.entity.MoradorPrincipal;
 import model.entity.MoradorSecundario;
 
 public class MoradorSecundarioDAO extends ConexaoDAO implements BaseInterfaceDAO<MoradorSecundario>{
@@ -114,6 +115,12 @@ public class MoradorSecundarioDAO extends ConexaoDAO implements BaseInterfaceDAO
 			return null;
 			
 		}
+	}
+
+	@Override
+	public ResultSet listarDados(MoradorPrincipal mp) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }		

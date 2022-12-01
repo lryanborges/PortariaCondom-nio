@@ -104,4 +104,38 @@ public class MoradorPrincipalBO {
 		}
 	}
 	
+	public List<MoradorPrincipalDTO> listarDados(MoradorPrincipalDTO dto) {
+			
+			List<MoradorPrincipalDTO> moradoresPrincipais = new ArrayList<MoradorPrincipalDTO>();
+			MoradorPrincipal mp = MoradorPrincipal.converter(dto);
+	        ResultSet rs = dao.listarDados(mp);
+	
+	        try {
+	
+	            while(rs.next()) {
+	            	MoradorPrincipalDTO mpDTO = new MoradorPrincipalDTO();	// MUDAR AS COLUNAS DE ACORDO COM O SQL
+	                mpDTO.setId(rs.getInt("id"));
+	                mpDTO.setNome(rs.getString("nome"));
+	                mpDTO.setCpf(rs.getString("cpf"));
+	                mpDTO.setApartamento(rs.getInt("apartamento"));
+	                mpDTO.setBloco(rs.getString("bloco"));
+	                mpDTO.setCategoria(rs.getString("categoria"));
+	                mpDTO.setRg(rs.getString("rg"));
+	                mpDTO.setDataNasc(rs.getString("nascimento"));
+	                mpDTO.setEmail(rs.getString("email"));
+	                mpDTO.setTelResidencial(rs.getString("telefoneResidencial"));
+	                mpDTO.setTelComercial(rs.getString("telefoneComercial"));
+	                mpDTO.setTelCelular(rs.getString("celular"));
+	                mpDTO.setAutorizarZap(rs.getBoolean("podeZap"));
+	                
+	                moradoresPrincipais.add(mpDTO);
+	            }
+	            return moradoresPrincipais;
+	        } catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}
+		}
+	
 }

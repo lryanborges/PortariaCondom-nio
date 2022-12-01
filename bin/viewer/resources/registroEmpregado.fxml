@@ -55,6 +55,15 @@
                   <Button layoutX="183.0" layoutY="51.0" mnemonicParsing="false" onAction="#excluir" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #CE5252;" styleClass="button-hand" text="Excluir" textFill="#fffbfb" />
                </children>
             </Pane>
+            <Button layoutX="6.0" layoutY="39.0" mnemonicParsing="false" onAction="#telaMain" style="-fx-background-color: none;" styleClass="button-hand">
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Desktop/Trabalhos%20-%20UFERSA/3º%20semestre/P.O.O/Projeto%20POO/codigos/src/br/edu/ufersa/hospital/view/resources/setavoltar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
       <Label layoutX="159.0" layoutY="14.0" text="Registro de Empregados" textFill="WHITE">

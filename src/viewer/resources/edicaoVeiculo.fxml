@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="499.0" style="-fx-background-color: #1F231F;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.api.TelaEdicaoVeiculo">
+   <children>
+      <Pane layoutX="56.0" layoutY="52.0" prefHeight="245.0" prefWidth="412.0" style="-fx-background-color: #3F543D; -fx-border-radius: 2; -fx-border-width: 2; -fx-border-color: #3F543D;">
+         <children>
+            <Label layoutX="219.0" layoutY="141.0" text="Placa:" textFill="WHITE" />
+            <TextField fx:id="marca" layoutX="83.0" layoutY="90.0" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="41.0" layoutY="94.0" text="Marca:" textFill="WHITE" />
+            <Label layoutX="205.0" layoutY="94.0" text="Modelo:" textFill="WHITE" />
+            <TextField fx:id="modelo" layoutX="257.0" layoutY="90.0" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #F3F3C4;" />
+            <Label layoutX="132.0" layoutY="35.0" text="Editar Veiculo" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="141.0" text="Cor:" textFill="WHITE" />
+            <TextField fx:id="cor" layoutX="83.0" layoutY="137.0" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #F3F3C4;" />
+            <TextField fx:id="placa" layoutX="257.0" layoutY="137.0" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #F3F3C4;" />
+         </children>
+      </Pane>
+      <Button layoutX="284.0" layoutY="308.0" mnemonicParsing="false" onAction="#editar" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Editar" textFill="#252d24">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="112.0" layoutY="308.0" mnemonicParsing="false" onAction="#telaRegistros" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #CAF9C6;" styleClass="button-hand" text="Voltar" textFill="#252d24">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

@@ -116,12 +116,12 @@ public class MoradorPrincipalDAO extends ConexaoDAO implements BaseInterfaceDAO<
 	}
 	
 	public ResultSet encontrar(MoradorPrincipal mp){
-        String sql = "SELECT * FROM Morador_Principal WHERE id=? ;";
+        String sql = "SELECT * FROM Morador_Principal WHERE id=?;";
 
         try {
             PreparedStatement ps = getConnection().prepareStatement(sql);
             ps.setInt(1, mp.getId());
-
+            
             ResultSet rs = ps.executeQuery();
             return rs;
         } catch(SQLException ex) {
@@ -129,5 +129,24 @@ public class MoradorPrincipalDAO extends ConexaoDAO implements BaseInterfaceDAO<
             return null;
         }
     }
+
+	@Override
+	public ResultSet listarDados(MoradorPrincipal mp) {
+		String sql = "SELECT * FROM Morador_Principal WHERE cpf=? OR nome=? OR apartamento=? OR bloco=?;";
+
+        try {
+            PreparedStatement ps = getConnection().prepareStatement(sql);
+            ps.setString(1, mp.getCpf());
+            ps.setString(2, mp.getNome());
+            ps.setInt(3, mp.getApartamento());
+            ps.setString(4,  mp.getBloco());
+
+            ResultSet rs = ps.executeQuery();
+            return rs;
+        } catch(SQLException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+	}
 	
 }

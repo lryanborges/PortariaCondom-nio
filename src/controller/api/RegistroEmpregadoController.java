@@ -5,20 +5,19 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import controller.dto.EmpregadoDTO;
-import controller.dto.MoradorSecundarioDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import model.services.EmpregadoBO;
-import model.services.MoradorSecundarioBO;
 import viewer.CondominioAcess;
 
-public class RegistroEmpregadoController {
+public class RegistroEmpregadoController implements Initializable {
 
     @FXML
     private TableColumn<EmpregadoDTO, String> columnApartamento;
@@ -62,6 +61,7 @@ public class RegistroEmpregadoController {
     	        columnApartamento.setCellValueFactory(new PropertyValueFactory<>("apartamento"));
     	        columnId.setCellValueFactory(new PropertyValueFactory<>("id"));
     	        columnIdMoradorP.setCellValueFactory(new PropertyValueFactory<>("idMoradorP"));
+    	        
     	        
     	        tabelaMoradorSecundario.setItems(listaMoradoresS);
     }
@@ -112,6 +112,11 @@ public class RegistroEmpregadoController {
     	dto.setRg(tabelaMoradorSecundario.getSelectionModel().getSelectedItem().getRg());
     	
     	TelaEdicaoEmpregadoController.telaEditar(dto);
+    }
+    
+    @FXML
+    public void telaMain() {
+    	CondominioAcess.telaRegistroMoradorPrincipal();
     }
 
 }

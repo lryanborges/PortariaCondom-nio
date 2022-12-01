@@ -1,5 +1,7 @@
 package model.entity;
 
+import controller.dto.AnimalDTO;
+
 public class Animal {
 	
 	private int id;
@@ -7,6 +9,8 @@ public class Animal {
 	private String nome;
 	private String raca;
 	private String cor;
+	private int idMorador;
+	private int apartamento;
 	
 	public Animal() {}
 	
@@ -87,6 +91,35 @@ public class Animal {
 		if(cor == null || cor == " " || cor == "0") {
 			System.out.println("Cor "+ cor +" não é válido.");
 		} else this.cor = cor;
+	}
+
+	public int getIdMorador() {
+		return idMorador;
+	}
+
+	public void setIdMorador(int idMorador) {
+		this.idMorador = idMorador;
+	}
+
+	public int getApartamento() {
+		return apartamento;
+	}
+
+	public void setApartamento(int apartamento) {
+		this.apartamento = apartamento;
+	}
+	
+	
+	public static Animal converter(AnimalDTO dto) {
+		Animal a = new Animal();
+		a.setApartamento(dto.getApartamento());
+		a.setCor(dto.getCor());
+		a.setEspecie(dto.getEspecie());
+		a.setId(dto.getId());
+		a.setIdMorador(dto.getIdMorador());
+		a.setNome(dto.getNome());
+		a.setRaca(dto.getRaca());
+		return a;
 	}
 	
 }
